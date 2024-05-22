@@ -3,7 +3,7 @@ import requests
 from win32com.client import Dispatch
 
 # initialisation
-newsapi = NewsApiClient(api_key='429f56c85dde485490e907c4b1b67557')
+newsapi = NewsApiClient(api_key='YOUR_API_KEY')
 
 # a = newsapi.get_everything(q='sports')
 #
