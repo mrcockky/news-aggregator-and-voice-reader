@@ -44,37 +44,6 @@ To achieve these objectives, the application was designed with the following com
 -   Documentation for setting up and running the script
 -   Source code with comments for clarity and maintainability
 
-## Code Example
-    from newsapi import NewsApiClient
-    import requests
-    from win32com.client import Dispatch
-     #Initialization
-    newsapi = NewsApiClient(api_key='YOUR_API_KEY')
-    query_params = {
-        "source": "bbc-news",
-        "sortBy": "top",
-        "apiKey": "YOUR_API_KEY"
-    }
-    main_url = 'https://newsapi.org/v1/articles'
-    res = requests.get(main_url, params=query_params)
-    open_bbc_page = res.json()
-    
-     #Getting all articles in a string article
-    article = open_bbc_page["articles"]
-    
-    #Empty list which will contain all trending news
-    results = []
-    
-    for ar in article:
-        results.append(ar["title"])
-    
-    for i in range(len(results)):
-        # Printing all trending news
-        print(i + 1, results[i])
-    
-    #To read the news out loud for us
-    speak = Dispatch("SAPI.Spvoice")
-    speak.Speak(results)` 
 
 ## Instructions for Running the Script
 
